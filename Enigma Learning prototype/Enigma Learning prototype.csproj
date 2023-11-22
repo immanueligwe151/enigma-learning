@@ -1,0 +1,374 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7FBE2ECD-C729-4409-8663-8F8BFB4D223C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Enigma_Learning</RootNamespace>
+    <AssemblyName>Enigma Learning</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>App icon 1.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup />
+  <ItemGroup>
+    <Reference Include="AForge, Version=2.2.5.0, Culture=neutral, PublicKeyToken=c1db6ff4eaa06aeb, processorArchitecture=MSIL">
+      <HintPath>packages\AForge.2.2.5\lib\AForge.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video, Version=2.2.5.0, Culture=neutral, PublicKeyToken=cbfb6e07d173c401, processorArchitecture=MSIL">
+      <HintPath>packages\AForge.Video.2.2.5\lib\AForge.Video.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video.DirectShow, Version=2.2.5.0, Culture=neutral, PublicKeyToken=61ea4348d43881b7, processorArchitecture=MSIL">
+      <HintPath>packages\AForge.Video.DirectShow.2.2.5\lib\AForge.Video.DirectShow.dll</HintPath>
+    </Reference>
+    <Reference Include="MessagingToolkit.QRCode, Version=1.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\MessagingToolkit.QRCode.1.3.0\lib\MessagingToolkit.QRCode.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Zen.Barcode.Core, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b5ae55aa76d2d9de, processorArchitecture=MSIL">
+      <HintPath>packages\Zen.Barcode.Rendering.Framework.3.1.10729.1\lib\Zen.Barcode.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="zxing, Version=0.16.5.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>packages\ZXing.Net.0.16.5\lib\net47\zxing.dll</HintPath>
+    </Reference>
+    <Reference Include="zxing.presentation, Version=0.16.5.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>packages\ZXing.Net.0.16.5\lib\net47\zxing.presentation.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Codes.cs" />
+    <Compile Include="Diary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Diary.Designer.cs">
+      <DependentUpon>Diary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="End of Test.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="End of Test.Designer.cs">
+      <DependentUpon>End of Test.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EnterCode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EnterCode.Designer.cs">
+      <DependentUpon>EnterCode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExamQuestions1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExamQuestions1.Designer.cs">
+      <DependentUpon>ExamQuestions1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Moodlet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Moodlet.Designer.cs">
+      <DependentUpon>Moodlet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Notes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Notes.Designer.cs">
+      <DependentUpon>Notes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RateYourDay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RateYourDay.Designer.cs">
+      <DependentUpon>RateYourDay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Review Your Revision.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Review Your Revision.Designer.cs">
+      <DependentUpon>Review Your Revision.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReviewContent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReviewContent.Designer.cs">
+      <DependentUpon>ReviewContent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RevisionStyle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RevisionStyle.Designer.cs">
+      <DependentUpon>RevisionStyle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ScanQRCode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ScanQRCode.Designer.cs">
+      <DependentUpon>ScanQRCode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Startup Page.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Startup Page.Designer.cs">
+      <DependentUpon>Startup Page.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Topics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Topics.Designer.cs">
+      <DependentUpon>Topics.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Diary.resx">
+      <DependentUpon>Diary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="End of Test.resx">
+      <DependentUpon>End of Test.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EnterCode.resx">
+      <DependentUpon>EnterCode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExamQuestions1.resx">
+      <DependentUpon>ExamQuestions1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Moodlet.resx">
+      <DependentUpon>Moodlet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Notes.resx">
+      <DependentUpon>Notes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="RateYourDay.resx">
+      <DependentUpon>RateYourDay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Review Your Revision.resx">
+      <DependentUpon>Review Your Revision.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReviewContent.resx">
+      <DependentUpon>ReviewContent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RevisionStyle.resx">
+      <DependentUpon>RevisionStyle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ScanQRCode.resx">
+      <DependentUpon>ScanQRCode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Startup Page.resx">
+      <DependentUpon>Startup Page.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Topics.resx">
+      <DependentUpon>Topics.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1 %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App icon 1.ico" />
+    <Content Include="App icon.ico" />
+    <None Include="Resources\pic67.png" />
+    <None Include="Resources\pic66.png" />
+    <None Include="Resources\pic65.png" />
+    <None Include="Resources\pic64.png" />
+    <None Include="Resources\pic63.png" />
+    <None Include="Resources\organisation theme.jpg" />
+    <None Include="Resources\pic62.png" />
+    <None Include="Resources\pic61.png" />
+    <None Include="Resources\pic60.png" />
+    <None Include="Resources\pic59.png" />
+    <None Include="Resources\pic58.png" />
+    <None Include="Resources\pic57.png" />
+    <None Include="Resources\pic56.png" />
+    <None Include="Resources\pic55.png" />
+    <None Include="Resources\chemical measurements.jpg" />
+    <None Include="Resources\pic54.png" />
+    <None Include="Resources\pic53.png" />
+    <None Include="Resources\pic52.png" />
+    <None Include="Resources\pic51.png" />
+    <None Include="Resources\pic50.png" />
+    <None Include="Resources\pic49.png" />
+    <None Include="Resources\pic48.png" />
+    <None Include="Resources\pic47.png" />
+    <None Include="Resources\pic46.png" />
+    <None Include="Resources\pic45.png" />
+    <None Include="Resources\pic44.png" />
+    <None Include="Resources\pic43.png" />
+    <None Include="Resources\pic42.png" />
+    <None Include="Resources\pic41.png" />
+    <None Include="Resources\pic40.png" />
+    <None Include="Resources\pic39a.png" />
+    <None Include="Resources\pic39.png" />
+    <None Include="Resources\pic38.png" />
+    <None Include="Resources\pic37.png" />
+    <None Include="Resources\pic36.png" />
+    <None Include="Resources\pic35.png" />
+    <None Include="Resources\pic34.png" />
+    <None Include="Resources\pic33.png" />
+    <None Include="Resources\pic32a.png" />
+    <None Include="Resources\pic32.png" />
+    <None Include="Resources\soundwaves for physics.jpg" />
+    <None Include="Resources\pic31.png" />
+    <None Include="Resources\pic30.png" />
+    <None Include="Resources\pic29.png" />
+    <None Include="Resources\pic28.png" />
+    <None Include="Resources\pic27.jpg" />
+    <None Include="Resources\pic26.png" />
+    <None Include="Resources\pic25.png" />
+    <None Include="Resources\pic24.png" />
+    <None Include="Resources\pic23.png" />
+    <None Include="Resources\pic22.png" />
+    <None Include="Resources\pic21.png" />
+    <None Include="Resources\pic20.png" />
+    <None Include="Resources\pic19.png" />
+    <None Include="Resources\pic18.png" />
+    <None Include="Resources\pic17.png" />
+    <None Include="Resources\pic16.png" />
+    <None Include="Resources\pic15.png" />
+    <None Include="Resources\pic14.png" />
+    <None Include="Resources\pic13.png" />
+    <None Include="Resources\chemical changes theme.jpg" />
+    <None Include="Resources\ph meter.jpg" />
+    <None Include="Resources\cells themed image.jpg" />
+    <None Include="Resources\leaf.jpg" />
+    <None Include="Resources\lung.jpg" />
+    <None Include="Resources\active transport.jpg" />
+    <None Include="Resources\osmosis.png" />
+    <None Include="Resources\diffusion.jpg" />
+    <None Include="Resources\binary fission.jpg" />
+    <None Include="Resources\mitosis.png" />
+    <None Include="Resources\root cell.png" />
+    <None Include="Resources\sperm cell.png" />
+    <None Include="Resources\Bacteria_Cell_pic.png" />
+    <None Include="Resources\pic12.png" />
+    <None Include="Resources\pic11.png" />
+    <None Include="Resources\pic10.png" />
+    <None Include="Resources\pic9.png" />
+    <None Include="Resources\pic8.png" />
+    <None Include="Resources\pic7.png" />
+    <None Include="Resources\contains code entered.txt" />
+    <None Include="Resources\pic6.png" />
+    <None Include="Resources\pic5.png" />
+    <None Include="Resources\pic4.png" />
+    <None Include="Resources\pic3.png" />
+    <None Include="Resources\pic2.png" />
+    <None Include="Resources\pic1.png" />
+    <None Include="Resources\alright_image.png" />
+    <None Include="Resources\not_great_image.jpg" />
+    <None Include="Resources\great_work_image.jpg" />
+    <None Include="Resources\great_work_image.jpg.bmp" />
+    <None Include="Resources\cell-animal1.jpg" />
+    <None Include="Resources\Plant-Cell-min-1.png" />
+    <None Include="Resources\animal_cell.jpg" />
+    <None Include="Resources\background.jpg" />
+    <None Include="Resources\Picture9.png" />
+    <None Include="Resources\Picture8.png" />
+    <None Include="Resources\Picture7.png" />
+    <None Include="Resources\Picture6.png" />
+    <None Include="Resources\review all content img.png" />
+    <None Include="Resources\revision img.jpg" />
+    <None Include="Resources\2 %282%291.png" />
+    <None Include="Resources\4 %282%29.png" />
+    <None Include="Resources\topics picture.jpg" />
+    <None Include="Resources\3 %282%29.png" />
+    <None Include="Resources\chem img.png" />
+    <None Include="Resources\bio imgp.png" />
+    <None Include="Resources\bio img.jpg" />
+    <None Include="Resources\biology icon image.jpg" />
+    <None Include="Resources\moodlet image.jpg" />
+    <None Include="Resources\home page image.jpg" />
+    <None Include="Resources\start dialog image.jpg" />
+    <None Include="Resources\2 %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
